@@ -28,10 +28,10 @@ namespace LilTween.Tests
         [SerializeField] private RectTransform _colorTestParent;
         [SerializeField] private RectTransform _movementTestParent;
 
-        private readonly ProfilerMarker _doTweenColorTestMarker = new("[ZID] [ColorTest] [DOTween]");
-        private readonly ProfilerMarker _lilTweenColorTestMarker = new("[ZID] [ColorTest] [LilTween]");
-        private readonly ProfilerMarker _doTweenMovementTestMarker = new("[ZID] [MovementTest] [DOTween]");
-        private readonly ProfilerMarker _lilTweenMovementTestMarker = new("[ZID] [MovementTest] [LilTween]");
+        private readonly ProfilerMarker _doTweenColorTestMarker = new("[AllocTestManager] [ColorTest] [DOTween]");
+        private readonly ProfilerMarker _lilTweenColorTestMarker = new("[AllocTestManager] [ColorTest] [LilTween]");
+        private readonly ProfilerMarker _doTweenMovementTestMarker = new("[AllocTestManager] [MovementTest] [DOTween]");
+        private readonly ProfilerMarker _lilTweenMovementTestMarker = new("[AllocTestManager] [MovementTest] [LilTween]");
 
         public void Awake()
         {
