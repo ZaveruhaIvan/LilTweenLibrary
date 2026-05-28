@@ -20,8 +20,8 @@ namespace LilTween.Tests.MoveAllocTest
         [SerializeField] private RectTransform[] _lilTweenObjects;
         [SerializeField] private RectTransform[] _doTweenObjects;
 
-        private readonly ProfilerMarker _lilTweenColorTestMarker = new("[MoveAllocTestManager] LilTween marker");
-        private readonly ProfilerMarker _doTweenColorTestMarker = new("[MoveAllocTestManager] DOTween marker");
+        private readonly ProfilerMarker _lilTweenTestMarker = new("[MoveAllocTestManager] LilTween marker");
+        private readonly ProfilerMarker _doTweenTestMarker = new("[MoveAllocTestManager] DOTween marker");
         private readonly Dictionary<RectTransform, Vector2> _lilTweenDefaultScreenPositions = new();
         private readonly Dictionary<RectTransform, Vector2> _doTweenDefaultScreenPositions = new();
 
@@ -46,21 +46,21 @@ namespace LilTween.Tests.MoveAllocTest
 
         private void Move()
         {
-            _lilTweenColorTestMarker.Begin();
+            _lilTweenTestMarker.Begin();
             for (var i = 0; i < _lilTweenObjects.Length; i++)
             {
                 var item = _lilTweenObjects[i];
                 item.MoveRect(new Vector2(item.anchoredPosition.x, _targetPositionY), _duration).WithDelay(_delay * i);
             }
-            _lilTweenColorTestMarker.End();
+            _lilTweenTestMarker.End();
             
-            _doTweenColorTestMarker.Begin();
+            _doTweenTestMarker.Begin();
             for (var i = 0; i < _doTweenObjects.Length; i++)
             {
                 var item = _doTweenObjects[i];
                 item.DOAnchorPos(new Vector2(item.anchoredPosition.x, -_targetPositionY), _duration).SetDelay(_delay * i);
             }
-            _doTweenColorTestMarker.End();
+            _doTweenTestMarker.End();
 
             Profiler.enabled = false;
         }
