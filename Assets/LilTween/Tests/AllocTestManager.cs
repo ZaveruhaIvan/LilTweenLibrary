@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using DG.Tweening;
 using LilTween.ChangeColor;
-using LilTween.Core;
 using LilTween.MoveRect;
 using Plugins.Demigiant.DOTween.Modules;
 using Unity.Profiling;
@@ -10,7 +9,7 @@ using UnityEngine;
 using UnityEngine.Profiling;
 using Button = UnityEngine.UI.Button;
 
-namespace Tests
+namespace LilTween.Tests
 {
     public class AllocTestManager : MonoBehaviour
     {

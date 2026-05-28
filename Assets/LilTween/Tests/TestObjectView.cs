@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Tests
+namespace LilTween.Tests
 {
     public class TestObjectView : MonoBehaviour
     {
