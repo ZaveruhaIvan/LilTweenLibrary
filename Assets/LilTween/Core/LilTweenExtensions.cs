@@ -26,7 +26,7 @@ namespace LilTween.Core
         {
             tween.Duration = duration;
             tween.Active = true;
-            tween.Ease = LilTweenSingleton.Instance.EaseLinearFunc;
+            tween.Ease = LilTweenSingleton.Instance.EaseOutQuadFunc;
         }
     }
 }
